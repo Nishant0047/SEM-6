@@ -1,119 +1,211 @@
-Artificial Intleligence 
-{ unite 2 started
-practical 4 completed}
+Assignment 3.1
 
-1] Introduction to Aetificial Intelligence
-   Developing Computer programs, working out mathematics, engaging in commonsense reasoning, 
-   uderstanding languages and interpreting it.
+1. What is Game theory?
+ans= Game Theory is a branch of applied mathematics that studies strategic decision-making in situations where the outcome depends on the actions of multiple individuals or entities, known as players. It provides a framework for analyzing and predicting the behavior of players in various scenarios, including economics, politics, biology, and social sciences.
 
-1.2] Various Defination of AI
-    AI may be defined as the branch of computer science that is concerned with the automation of
-    intelligent behaviour.
+Key Components of Game Theory:
+Interdependence: The outcome for each player depends on the strategies chosen by all players involved.
 
-1.3] The Foundation of AI
-    i)Philosophy
-   ii)Mathematics
-  iii)Economics
-   iv)Neuroscience
-    v)Phychology
-1.4] The Strong and Weak AI
-    i)
+Strategic Interaction: Players make decisions based on the anticipated actions of others, which can be either cooperative or competitive.
 
+Types of Games: Games can be classified as cooperative or non-cooperative, zero-sum or non-zero-sum, and simultaneous or sequential.
 
-   ii)
+Applications: Game theory is used in economics, business, politics, evolutionary biology, and more to predict outcomes and guide decision-making.
 
+Historical Background:
+Game theory was initially developed by John von Neumann and Oskar Morgenstern in their book "Theory of Games and Economic Behavior" (1944), and it was further advanced by John Nash in the 1950s.
 
-1.5] What AI can do Today ?
-  1) Autonomous Planning And Scheduling
-  2) Game Playing
-  3) Autonomous Control
-  4) Diagnosis
-  5) Logistic Planning 
-  6) Robotics
+2. Explain Heuristic Alpha–Beta Tree Search  
+ans= Heuristic Alpha-Beta Tree Search is an enhanced version of the alpha-beta pruning algorithm that integrates heuristic evaluation functions and move-ordering strategies to optimize decision-making in adversarial games like chess or checkers. By intelligently pruning non-promising branches and prioritizing likely optimal moves, it dramatically reduces computational complexity while maintaining accuracy.
 
-2] AI Problem 
+Core Principles
+Alpha-Beta Pruning Basics:
 
+Alpha (α) represents the minimum score the maximizing player is guaranteed.
 
-3] The Underlying Assumption
-i)Formal Logic
-ii)Algebra
-iii)A digital computer
-iv)Chess
+Beta (β) represents the maximum score the minimizing player is guaranteed.
 
+Branches are pruned when α ≥ β, as further exploration cannot affect the final outcome.
 
+Heuristic Integration:
 
+Static Evaluation Functions: Estimate the value of non-terminal game states (e.g., board positions) using domain-specific heuristics (e.g., material advantage in chess).
 
-4]
+Move Ordering: Prioritize exploring moves likely to yield the best results first (e.g., capturing a piece in chess), which increases pruning efficiency.
+Key Enhancements Over Basic Alpha-Beta
 
+  Feature            Basic Alpha-Beta                      Heuristic Alpha-Beta
+1)Node Evaluation    Evaluates all nodes exhaustively      Uses heuristics to skip low-value nodes
+2)Move Ordering      Arbitrary or fixed order              Heuristic-driven ordering (e.g., best-first)
+3)Search Depth       Limited by computational resources    Deeper exploration due to reduced complexity
+4)Performance        O(b^d)(worst-case)                    O[((b^d)1^1/2)]with optimal ordering
 
+Benefits
+Efficiency: Reduces the effective branching factor from b to (b)^1/2 , allowing twice the search depth in the same time.
 
-1.1  The Concept of Artificial Intelligence (AI) .......................................................  1 - 2 
- 1.1.1  Introduction ..................................................................................................  1 - 2 
- 1.1.2  Various Definitions of AI ...............................................................................  1 - 2 
- 1.1.3  The Foundation of AI ....................................................................................  1 - 4 
- 1.1.4  The Strong and Weak AI ...............................................................................  1 - 5 
-1.1.4.1  Strong AI .....................................................................................................  1 - 5 
-1.1.4.2  Weak AI .......................................................................................................  1 - 5 
- 1.1.5   What AI can do Today ? ...............................................................................  1 - 6 
-1.1.5.1  Autonomous Planning and Scheduling .......................................................  1 - 6 
-1.1.5.2  Game Playing  .............................................................................................  1 - 6 
-1.1.5.3  Autonomous Control ..................................................................................  1 - 6 
-1.1.5.4  Diagnosis .....................................................................................................  1 - 6 
-1.1.5.5  Logistic Planning .........................................................................................  1 - 6 
-1.1.5.6  Robotics ......................................................................................................  1 - 6 
-1.1.5.7  Language Understanding and Problem Solving ..........................................  1 - 7 
- 1.1.6  Human Vs Machine  ......................................................................................  1 - 7 
-1.1.6.1  Will Machine behave Exactly as Human ? ...................................................  1 - 7 
-1.1.6.2  Comparisons between Human and Machines ............................................  1 - 7 
- 1.1.7  State of the Art .............................................................................................  1 - 8 
- 1.2  AI Problem .......................................................................................................  1 - 9 
- 1.3  The Underlying Assumption .......................................................................... 1 - 10 
- 1.4  What is an AI Technique ? ............................................................................. 1 - 11 
- 1.5  The Level of the Model ................................................................................. 1 - 11 
- 1.6  Criteria for Success ........................................................................................ 1 - 12 
-(vii) 
- 1.7  History of Artificial Intelligence ..................................................................... 1 - 13 
- 1.8  AI Terms ........................................................................................................ 1 - 15 
- 1.8.1  Agents and it's Environment .......................................................................  1 - 15 
- 1.8.2  The AI Terminology .....................................................................................  1 - 16 
- 1.8.3  Architecture of Agent .................................................................................  1 - 17 
- 1.8.4  Schematic of AI's Agent Performing Action ................................................  1 - 17 
- 1.8.5  Role of An Agent Program ..........................................................................  1 - 18 
- 1.8.6  Simple Example for Tabulation of a Agent .................................................  1 - 18 
- 1.8.7  The Weak and Strong Agent .......................................................................  1 - 18 
-1.8.7.1  Weak Agent ...............................................................................................  1 - 19 
-1.8.7.2  Strong Agent .............................................................................................  1 - 19 
- 1.8.8  Rational Behaviour and Omniscience .........................................................  1 - 20 
-1.8.8.1  Rational Agent ..........................................................................................  1 - 20 
-1.8.8.2   The Good and the Bad Agent ...................................................................  1 - 21 
-1.8.8.3   Omniscience, Learning and Autonomy ....................................................  1 - 21 
- 1.8.9  Agent and it's Environment ........................................................................  1 - 22 
-1.8.9.1  Agent Description .....................................................................................  1 - 22 
- 1.9  The Environments ......................................................................................... 1 - 23 
- 1.9.1 Nature of Environment ...............................................................................  1 - 23 
- 1.9.2  Types of Task Environment .........................................................................  1 - 24 
-1.9.2.1  Fully Observable Vs Partially Observable ..................................................  1 - 24 
-1.9.2.2  Deterministic Vs Stochastic .......................................................................  1 - 24 
-1.9.2.3  Episodic Vs Sequential ..............................................................................  1 - 25 
-1.9.2.4  Static Vs Dynamic ......................................................................................  1 - 26 
-1.9.2.5  Discrete Vs Continuous .............................................................................  1 - 26 
-1.9.2.6  Single Agent Vs Multiagent .......................................................................  1 - 27 
-1.9.2.7  Complexity Comparison of Task Environment  .........................................  1 - 27 
- 1.9.3  More Types of Task Environment ...............................................................  1 - 28 
- 1.10  Different Types of Agents ............................................................................. 1 - 29 
- 1.10.1  Intelligent Agent .........................................................................................  1 - 29 
-(viii) 
- 1.10.2  Different Forms of Agents : (Types of Agents) ...........................................  1 - 31 
-1.10.2.1  Agent Type 1 .............................................................................................  1 - 31 
-1.10.2.2  Agent Type 2 .............................................................................................  1 - 32 
-1.10.2.3  Agent Type 3 .............................................................................................  1 - 33 
-1.10.2.4  Agent Type 4 .............................................................................................  1 - 34 
- 1.10.3  The Learning Agent .....................................................................................  1 - 35 
-1.10.3.1  Components of Learning Agent ................................................................  1 - 36 
- 1.10.4  More Types of Agents .................................................................................  1 - 37 
- 1.11  Designing an Agent System ........................................................................... 1 - 37 
- 1.11.1  The Steps in Designing an Agent.................................................................  1 - 38 
- 1.11.2  Examples of Agent Types and Their PEAS Description 
-  According to Their Uses ..............................................................................  1 - 38 
- 1.11.3  The Detail Example of PEAS ........................................................................  1 - 40 
- 1.12 One Final Word ............................................................................................. 1 - 41
+Optimality: Returns the same result as minimax but with fewer evaluations.
+
+Adaptability: Applicable to games with large branching factors (e.g., chess, Go).
+
+Limitations
+Heuristic Dependency: Accuracy relies on the quality of the evaluation function.
+
+Order Sensitivity: Performance drops if moves are poorly ordered.
+
+By combining alpha-beta pruning with heuristic intelligence, this algorithm balances computational feasibility and strategic depth, making it a cornerstone of modern game AI.
+
+3. Explain Stochastic Games, Partially Observable Games  
+ans=Stochastic games and partially observable games are advanced frameworks in game theory and AI that model decision-making in dynamic, multi-agent environments with uncertainty. Here's a breakdown of both concepts:
+
+Stochastic Games
+Stochastic games (or Markov games) extend repeated games by introducing probabilistic state transitions and multiple stages of interaction. Developed by Lloyd Shapley in the 1950s, they model scenarios where players' actions influence both immediate payoffs and future states.
+Key Components:
+States: A finite set Q representing game configurations (e.g., positions on a board, economic conditions).
+Players: Multiple agents (N) making decisions.
+Actions: Each player i has an action set Ai; joint actions a⃗=(a1,...,an) determine transitions.
+Transition Function: P(q,a⃗,q′) defines the probability of moving from stateq q to q ′ after joint action a⃗.
+Partially Observable Games
+Partially observable games involve agents with incomplete knowledge of the game state. These include:
+
+1. Partially Observable Markov Decision Processes (POMDPs)
+Single-agent models where observations provide noisy/incomplete state information.
+
+Belief States: Probability distributions over possible hidden states.
+
+Policies: Strategies map belief states to actions to maximize cumulative rewards.
+Example: A robot navigating with sensor noise.
+
+2. Partially Observable Stochastic Games (POSGs)
+Multi-agent extensions of POMDPs where players compete or collaborate under partial information.
+Formal Definition: A tuple ⟨I,S,{b0},{Ai},{Oi},P,{Ri}⟩, where Oi are observation sets for each agent.
+
+Challenges: Solving POSGs is computationally intensive due to hidden states and interdependent strategies.
+Solution Methods:
+Dynamic Programming: Iteratively eliminates dominated strategies.
+
+Belief-Space Planning: Maintains belief states using particle filters or point-based approximations.
+
+Heuristic Algorithms: Prioritize high-likelihood actions to reduce complexity.
+Applications:
+Poker: Opponent modeling with hidden cards.
+
+Healthcare: Treatment planning under diagnostic uncertainty.
+
+Multi-Robot Systems: Coordination with limited sensor data.
+
+Comparison           
+Feature              Stochastic Games                 Partially Observable Games
+1)Observability      Full state visibility            Partial or noisy observations
+2)Agents             Multiple                         Single (POMDP) or multiple (POSG)
+3)Complexity         Polynomial in states/actions     PSPACE-hard (POSGs)
+4)Solution Focus     Equilibrium strategies           Belief-state policies
+
+Key Challenges
+Stochastic Games: Balancing infinite-horizon strategies and equilibrium computation.
+
+POSGs: Scalability due to exponential belief-state growth.
+
+These frameworks are pivotal in AI for modeling real-world uncertainty, enabling advancements in robotics, economics, and strategic decision-making.
+
+4. Explain Constraint Satisfaction Problems (CSP)
+ans=Constraint Satisfaction Problems (CSPs) are mathematical problems that involve finding a solution by satisfying a set of constraints. These constraints limit the possible values that variables can take, ensuring that the solution adheres to specific rules or conditions. CSPs are widely used in artificial intelligence and operations research to model and solve complex problems in various domains.
+
+Key Components of CSPs:
+Variables: A finite set of variables V={V1,V2,...,Vn}that need to be assigned values.
+
+Domain: Each variable Vi has a domain dom(Vi)of discrete values it can take.
+
+Constraints: A set of constraints C that define the allowed combinations of values for subsets of variables.
+
+Example: Sudoku
+Sudoku is a classic example of a CSP:
+
+Variables: Empty cells in the Sudoku grid.
+
+Domain: Numbers 1 through 9.
+
+Constraints: Each row, column, and 3x3 sub-grid must contain each number exactly once.
+
+Solution Process:
+Assignment: Assign values to variables from their domains.
+
+Constraint Satisfaction: Ensure that all constraints are met by the assignment.
+
+Solution: A complete assignment that satisfies all constraints is a solution to the CSP.
+
+Techniques for Solving CSPs:
+Backtracking Search: Systematically tries different assignments until a solution is found or all possibilities are exhausted.
+
+Constraint Propagation: Reduces the search space by eliminating values that cannot lead to a solution.
+
+Local Search: Iteratively improves an initial assignment by making small changes.
+
+Applications:
+Scheduling: Assigning tasks to resources while respecting constraints like time slots and availability.
+
+Resource Allocation: Allocating resources under constraints like budget limits and capacity constraints.
+
+Puzzle Solving: Beyond Sudoku, CSPs are used in crosswords, cryptarithmetic, and more.
+
+Complexity:
+CSPs can be computationally challenging due to their combinatorial nature. The complexity often depends on the number of variables, domain sizes, and the structure of constraints. Techniques like constraint propagation and heuristics help manage this complexity.
+
+Tools and Languages:
+Constraint Programming Languages: Prolog, Choco for Java, etc., provide built-in support for modeling and solving CSPs.
+
+Libraries: Various libraries in languages like C++ and Python offer CSP solving capabilities.
+
+In summary, CSPs provide a powerful framework for modeling and solving problems with constraints, making them a cornerstone of AI and operations research.
+
+5. Discuss Inference in CSPs, Backtracking Search for CSPs
+ans=Inference in CSPs
+Inference in Constraint Satisfaction Problems (CSPs) involves using constraints to deduce which variable-value pairs are consistent and which are not. This process helps reduce the search space by eliminating values that cannot lead to a valid solution. Key inference techniques include:
+
+Types of Consistency:
+Node Consistency: Ensures that each variable's domain values satisfy its unary constraints.
+
+Arc Consistency: Ensures that for every value of one variable, there is a consistent value in the connected variables.
+
+Path Consistency: Tightens binary constraints by considering implicit constraints inferred from triples of variables.
+
+K-Consistency: Generalizes consistency to sets of k variables, ensuring that any consistent assignment to k-1 variables can be extended to the kth variable.
+
+Inference Algorithms:
+Constraint Propagation: Reduces the domain of variables by eliminating values that cannot participate in a valid solution.
+
+Local Consistency: Enforces consistency in parts of the graph, eliminating inconsistent values throughout the network.
+
+Backtracking Search for CSPs
+Backtracking search is a fundamental algorithm for solving CSPs. It systematically tries different assignments until a solution is found or all possibilities are exhausted.
+
+Steps in Backtracking Search:
+Initialization: Start with an empty assignment.
+
+Variable Selection: Choose an unassigned variable.
+
+Value Selection: Try each value from the variable's domain.
+
+Constraint Checking: Check if the current assignment satisfies all constraints.
+
+If it does, proceed to the next unassigned variable.
+
+If not, backtrack by undoing the last assignment and trying the next value.
+
+Solution Found: If all variables are assigned and all constraints are satisfied, a solution is found.
+
+Failure: If all values for a variable have been tried without finding a valid assignment, backtrack further until a solution is found or all possibilities are exhausted.
+
+Enhancements to Backtracking:
+Forward Checking: Immediately checks the impact of an assignment on other variables' domains to prune the search space.
+
+Constraint Propagation: Used in conjunction with backtracking to further reduce the search space by eliminating inconsistent values.
+
+Example: Sudoku
+In Sudoku, backtracking search can be used to fill in numbers from 1 to 9 in empty cells while ensuring that each row, column, and 3x3 block contains each number exactly once. Inference techniques like arc consistency help eliminate impossible values for cells based on the current state of the board.
+
+Advantages and Challenges:
+Advantages: Backtracking with inference can efficiently solve CSPs by reducing the search space.
+
+Challenges: The algorithm's efficiency depends on the order of variable and value selection, and it can still be computationally intensive for large problems.
+
+By combining backtracking search with inference techniques, CSPs can be solved more efficiently, making these methods crucial in AI for solving complex problems under constraints.
